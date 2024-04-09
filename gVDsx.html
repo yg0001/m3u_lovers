@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xtream Codes Sharing</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wworth@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 500px;
+      max-width: 95%;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .header {
+      margin: 20px;
+    }
+
+    .date {
+      font-size: 16px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 100px;
+      margin: 0;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #00ffff;
+      }
+    }
+
+    .instructions {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      /* margin-bottom: 15px; */
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      outline: none;
+      text-align: center;
+    }
+
+    .copy-btn {
+      background: linear-gradient(45deg, #00ffff, #7f00ff);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+       margin-bottom: 20px;
+    }
+
+    .copy-btn:hover {
+      background: linear-gradient(45deg, #7f00ff, #00ffff);
+    }
+
+    .copy-btn:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .copy-btn:hover:before {
+      width: 200%;
+      height: 200%;
+    }
+
+    .tutorial-box {
+      padding: 4px;
+      border: 5px solid #00ffff;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .tutorial-box p a {
+  color: red;
+  text-decoration: none;
+}
+
+    .download-link {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .download-link a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://yg0001.github.io/m3u/IMG_20240315_140552_507.jpg" alt="Logo" class="logo">
+    <div class="header">
+      <div class="date">9 APRIL 2024</div>
+      <h1>M3U Lovers Playlist Zone</h1>
+      <p class="instructions">Here is your Xtream Codes, paste it in OTT Navigator to enjoy TV Channels.</p>
+    </div>
+    <main>
+      <div class="input-container">
+        <input type="text" class="input-field" value="http://opplex.tv:8080/" id="url" readonly>
+        <button class="copy-btn" onclick="copyText('url')">Copy URL</button>
+        <input type="text" class="input-field" value="135790" id="username" readonly>
+        <button class="copy-btn" onclick="copyText('username')">Copy Username</button>
+        <input type="text" class="input-field" value="135790" id="password" readonly>
+        <button class="copy-btn" onclick="copyText('password')">Copy Password</button>
+      </div>
+      <div class="tutorial-box">
+        <p>Tutorial: <a href="http://t.me/m3u_lovers/48" target="_blank">http://t.me/m3u_lovers/48</a></p>
+      </div>
+      <div class="download-link">
+        <a href="https://devuploads.com/ncjag16phl9q
+" target="_blank">Download OTT Navigator</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const textToCopy = document.getElementById(id).value;
+      navigator.clipboard.writeText(textToCopy);
+      const copyBtn = document.querySelector(`button[onclick="copyText('${id}')"]`);
+      copyBtn.innerHTML = 'Copied!';
+      copyBtn.disabled = true; // Disable the button after copying
+    }
+  </script>
+</body>
+</html>
